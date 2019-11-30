@@ -32,7 +32,7 @@ AC_PROG_CC
 LT_VERSION_INFO="3:0:0"
 AC_SUBST([LT_VERSION_INFO])
 
-AC_CHECK_HEADER([gssapi/gssapi.h], [HAVE_GSSAPI_H=yes], [HAVE_GSSAPI_H=no])
+AC_CHECK_HEADER([gss/api.h], [HAVE_GSSAPI_H=yes], [HAVE_GSSAPI_H=no])
 
 AC_ARG_ENABLE(gssapi,
 	[AC_HELP_STRING([--disable-gssapi], [Disable GSSAPI support @<:@default=no@:>@])],

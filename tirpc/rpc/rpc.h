@@ -80,7 +80,7 @@
 extern "C" {
 #endif
 extern int get_myaddress(struct sockaddr_in *);
-extern int bindresvport(int, struct sockaddr_in *);
+extern int bindresvport(int, struct sockaddr_in *) __THROW;;
 extern int registerrpc(int, int, int, char *(*)(char [UDPMSGSIZE]),
     xdrproc_t, xdrproc_t);
 extern int callrpc(const char *, int, int, int, xdrproc_t, void *,
@@ -91,7 +91,7 @@ char *taddr2uaddr(const struct netconfig *, const struct netbuf *);
 struct netbuf *uaddr2taddr(const struct netconfig *, const char *);
 
 struct sockaddr;
-extern int bindresvport_sa(int, struct sockaddr *);
+extern int bindresvport_sa(int, struct sockaddr *) __THROW;;
 #ifdef __cplusplus
 }
 #endif
